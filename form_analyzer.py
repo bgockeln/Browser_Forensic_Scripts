@@ -55,5 +55,7 @@ with open("form_history.csv", "w", newline="", encoding="utf-8") as csvfile:
         # Write each row of actual form data to the CSV file.
         writer.writerow([fieldname, value, timesUsed, firstUsed, lastUsed])
 
+print("Analysis Complete")
+
 # Close DB connection
 conn.close()

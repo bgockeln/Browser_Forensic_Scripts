@@ -10,22 +10,30 @@ and formhistory.sqlite files.
 
 This script reads Firefox’s places.sqlite database to extract:
 
-+ URLs
-+ Page titles
-+ Visit counts
-+ Timestamps of the last visit
++ URLs - The visited web address
++ Page Title - The title of the visited page
++ Visit Count - How often the page was visited
++ Last Visit Date - Timestamp of the last visit
 
 The extracted data is saved into a CSV file for easy analysis.
 
-## 2. Form History Analyzer (planned)
+## 2. Form History Analyzer
 
-This script will analyze Firefox’s form history (formhistory.sqlite) and is planned for future implementation.
+This script reads Firefox's formhistory.sqlite database to extract:
+
++ Fieldname - The name of the form field where text was entered
++ Value - The text that was typed into the field
++ Times Used - How often this entry was used
++ First Used - Timestap of the first usage
++ Last Used - Timestamp of the last usage
+
+The extracted data is saved into a CSV file for easy analysis.
 
 ### Usage
 
 #### 1. Preparing the database files
 
-Copy the following files from your Firefox profile directory into the browser_profile folder in this project.
+Copy the following files from your Firefox profile directory into the _**browser_profile**_ folder in this project.
 **For the Places.sqlite Analyzer:**
 
 + places.sqlite

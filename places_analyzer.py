@@ -52,6 +52,8 @@ with open("history_export.csv", "w", newline="", encoding="utf-8") as csvfile:
     # Write each row of actual browsing data to the CSV file.
     writer.writerow([ts, count, title, url])
 
+print("Analysis Complete")
+
 # Close DB conection.
 conn.close()
 
