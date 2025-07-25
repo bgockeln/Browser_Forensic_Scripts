@@ -25,7 +25,7 @@ query = """
 SELECT url, title, visit_count, last_visit_date
 FROM moz_places
 ORDER BY last_visit_date DESC
-Limit 20;
+Limit 50;
 """
 
 # Execute the SQL query.
