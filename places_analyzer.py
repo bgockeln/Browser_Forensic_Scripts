@@ -4,9 +4,17 @@
 import sqlite3
 from datetime import datetime, timedelta
 import csv
-
+import os #
+import sys #
 # Path to the Firefox profile database.
 db_path = "./browser_profile/places.sqlite"
+
+# Check if file exists
+if not os.path.exists("./browser_profile/places.sqlite"):
+    print("Error: places sqlite not found in ./browser_profile.")
+    sys.exit(1)
+
+print("File found. Proceeding...")
 
 # Connect to SQLite DB and create a cursor to execute queries.
 conn = sqlite3.connect(db_path)
@@ -41,7 +49,7 @@ with open("history_export.csv", "w", newline="", encoding="utf-8") as csvfile:
     else:
       ts = "N/A"
     
-    # Write each row of actual browing data to the CSV file.
+    # Write each row of actual browsing data to the CSV file.
     writer.writerow([ts, count, title, url])
 
 # Close DB conection.

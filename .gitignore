@@ -2,3 +2,5 @@ browser_profile/formhistory.sqlite
 browser_profile/places.sqlite
 browser_profile/places.sqlite-wal
 browser_profile/places.sqlite-shm
+form_history.csv
+history_export.csv
